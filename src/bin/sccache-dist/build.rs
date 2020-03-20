@@ -380,6 +380,7 @@ impl OverlayBuilder {
                         }
                         cmd.arg("--setenv").arg(k).arg(v);
                     }
+                    cmd.arg("--setenv").arg("LD_LIBRARY_PATH").arg("/lib/x86_64-linux-gnu");
                     cmd.arg("--");
                     cmd.arg(executable);
                     cmd.args(arguments);
